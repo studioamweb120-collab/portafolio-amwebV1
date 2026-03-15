@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Studio A & M Web — Ingeniería web de alto rendimiento para empresas que quieren dominar la economía digital." />
+  <title>Studio A &amp; M Web — Ingeniería Web de Alto Rendimiento</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════ CIRCUIT CANVAS ═══════════════════════════ -->
+  <canvas id="circuit-canvas"></canvas>
+
+  <!-- ═══════════════════════════ HEADER / NAV ═══════════════════════════ -->
+  <header id="site-header">
+    <div class="header-inner container">
+      <a href="#hero" class="logo-link" aria-label="Studio A & M Web — Inicio">
+        <div class="logo-wrapper">
+           <img src="img/logo.png" alt="Studio A & M Web Logo" class="logo-img">
+          <div class="logo-fallback" style="display:none;">
+            <span class="logo-fallback-text">A<span class="amp">&amp;</span>M</span>
+            <span class="logo-fallback-sub">STUDIO WEB</span>
+          </div>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#hero" class="nav-link">Inicio</a></li>
+          <li><a href="#about" class="nav-link">Sobre Nosotros</a></li>
+          <li><a href="#services" class="nav-link">Servicios</a></li>
+          <li><a href="#projects" class="nav-link">Proyectos</a></li>
+          <li><a href="#process" class="nav-link">Proceso</a></li>
+          <li><a href="#contact" class="nav-link cta-nav">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema Día/Noche">
+          <i class="fa-solid fa-sun" id="theme-icon-sun"></i>
+          <i class="fa-solid fa-moon" id="theme-icon-moon"></i>
+          <span class="theme-label" id="theme-label">Day</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menú móvil" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+    <section id="hero" class="section-hero">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-binary-rain" aria-hidden="true" id="binary-rain"></div>
+
+      <div class="container hero-content">
+        <div class="hero-badge">
+          <i class="fa-solid fa-code"></i>
+          <span>Ingeniería Web &amp; Soluciones Digitales</span>
+        </div>
+        <h1 class="hero-title">
+          Ingeniería Web que<br />
+          <span class="gradient-text">Impulsa tu Crecimiento</span>
+        </h1>
+        <p class="hero-subtitle">
+          Diseñamos y construimos plataformas web escalables, de alto rendimiento y preparadas para el futuro.
+          Transformamos requerimientos complejos en arquitecturas sólidas que generan resultados medibles.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fa-solid fa-rocket"></i> Ver Nuestros Proyectos
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fa-solid fa-paper-plane"></i> Iniciar Consulta
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num" data-target="4">0</span><span class="stat-suffix"></span>
+            <span class="stat-label">Proyectos Fundacionales</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="1">0</span><span class="stat-suffix"> año</span>
+            <span class="stat-label">Energía &amp; Compromiso Total</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="100">0</span><span class="stat-suffix">%</span>
+            <span class="stat-label">Atención Personalizada</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            ><span class="stat-suffix">+</span><span class="stat-num" data-target="15000">0</span>
+            <span class="stat-label">líneas de código escritas</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll-indicator">
+        <span>Descubre más</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+    <section id="about" class="section-about">
+      <div class="section-circuit-border top" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-label"><span class="code-bracket">&lt;</span>Sobre Nosotros<span class="code-bracket">/&gt;</span></div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <h2 class="section-title">Talento joven con <span class="gradient-text">estándares sin concesiones</span></h2>
+            <p class="about-intro">
+              Studio A &amp; M Web es un estudio de dos desarrolladores que cubren el stack completo: desde
+              la lógica del servidor hasta la interfaz que ve el usuario.
+            </p>
+            <p class="about-body">
+              <strong>André</strong> se ocupa del backend: APIs, bases de datos, lógica de negocio y
+              todo lo que hace que una aplicación funcione bien por dentro.
+              <strong>Marcelo</strong> trabaja en el frontend: interfaces, diseño y experiencia de usuario
+              que sea clara, moderna y fácil de usar.
+            </p>
+            <p class="about-body">
+              Somos estudiantes comprometidos con cada proyecto. Brindamos atención directa, comunicación clara y soluciones funcionales, con un enfoque profesional y cercano.
+            </p>
+            <div class="about-values">
+              <div class="value-chip"><i class="fa-solid fa-fire"></i> Compromiso Total</div>
+              <div class="value-chip"><i class="fa-solid fa-gauge-high"></i> Código Moderno</div>
+              <div class="value-chip"><i class="fa-solid fa-user-check"></i> Atención Directa</div>
+              <div class="value-chip"><i class="fa-solid fa-rotate"></i> Iteración Rápida</div>
+            </div>
+          </div>
+
+          <div class="about-founders reveal reveal-delay">
+            <div class="founder-card">
+              <div class="founder-avatar">
+                <div class="avatar-initials">A</div>
+                <div class="avatar-circuit"></div>
+              </div>
+              <div class="founder-info">
+                <h3>André</h3>
+                <span class="founder-role">Co-Fundador &amp; Backend Developer</span>
+                <p>Enfocado en construir APIs sólidas, arquitecturas backend limpias y sistemas que escalan. Cada endpoint que escribe está pensado para aguantar el crecimiento del negocio del cliente desde el día uno.</p>
+                <div class="founder-tech">
+                  <span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>MongoDB</span><span>Docker</span>
+                </div>
+              </div>
+            </div>
+            <div class="founder-card">
+              <div class="founder-avatar">
+                <div class="avatar-initials">M</div>
+                <div class="avatar-circuit"></div>
+              </div>
+              <div class="founder-info">
+                <h3>Marcelo</h3>
+                <span class="founder-role">Co-Fundador &amp; Frontend Developer</span>
+                <p>Construye interfaces que se ven increíbles y funcionan mejor aún. Su obsesión: que cada detalle visual tenga un propósito y que la experiencia de usuario sea tan fluida que el código se vuelva invisible.</p>
+                <div class="founder-tech">
+                  <span>React</span><span>Next.js</span><span>TypeScript</span><span>Figma</span><span>Tailwind</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mission / Vision cards -->
+        <div class="mv-grid">
+          <div class="mv-card reveal">
+            <div class="mv-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <h3>Misión</h3>
+            <p>Construir productos web que realmente funcionen para el negocio del cliente. Sin promesas vacías, sin atajos. Código limpio, entregas en tiempo y una comunicación directa que hace que trabajar con nosotros sea tan fácil como debería ser.</p>
+          </div>
+          <div class="mv-card reveal reveal-delay">
+            <div class="mv-icon"><i class="fa-solid fa-eye"></i></div>
+            <h3>Visión</h3>
+            <p>Convertirnos en el estudio de referencia para fundadores, emprendedores y empresas en crecimiento que buscan un equipo técnico confiable, comprometido y que hable su idioma — no solo el del código.</p>
+          </div>
+          <div class="mv-card reveal reveal-delay-2">
+            <div class="mv-icon"><i class="fa-solid fa-handshake"></i></div>
+            <h3>Compromiso</h3>
+            <p>Cada proyecto que aceptamos recibe nuestra atención completa. Somos un estudio pequeño por elección: eso nos permite conocer tu negocio en profundidad y darte el nivel de cuidado que una agencia grande jamás podría ofrecer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="section-circuit-border bottom" aria-hidden="true"></div>
+    </section>
+
+    <!-- ═══════════════════════════ SERVICES ═══════════════════════════ -->
+    <section id="services" class="section-services">
+      <div class="container">
+        <div class="section-label"><span class="code-bracket">&lt;</span>Servicios<span class="code-bracket">/&gt;</span></div>
+        <h2 class="section-title text-center">Soluciones Web <span class="gradient-text">a Medida</span></h2>
+        <p class="section-subtitle text-center">Cada servicio está construido con las herramientas que el mercado usa hoy, un proceso claro y la atención directa de los dos desarrolladores que van a ejecutarlo.</p>
+
+        <div class="services-grid">
+
+          <div class="service-card reveal">
+            <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3>Desarrollo Web a Medida</h3>
+            <p>Arquitectura y desarrollo de aplicaciones web de alta complejidad, desde sistemas de gestión interna hasta plataformas públicas de tráfico masivo. Código limpio, documentado y mantenible.</p>
+            <ul class="service-tech">
+              <li>React / Next.js</li><li>Vue / Nuxt.js</li><li>Angular</li><li>Node.js / Express</li><li>TypeScript</li>
+            </ul>
+            <div class="service-footer">
+              <a href="#contact" class="service-cta">Consultar <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="service-card reveal reveal-delay">
+            <div class="service-icon"><i class="fa-solid fa-plug"></i></div>
+            <h3>API Integration &amp; Design</h3>
+            <p>Diseño e integración de APIs RESTful y GraphQL. Conectamos sus sistemas existentes con nuevas plataformas, gateways de pago, ERPs, CRMs y servicios de terceros de forma segura y eficiente.</p>
+            <ul class="service-tech">
+              <li>REST / GraphQL</li><li>OAuth 2.0 / JWT</li><li>Stripe / PayPal</li><li>Webhooks</li><li>OpenAPI 3.0</li>
+            </ul>
+            <div class="service-footer">
+              <a href="#contact" class="service-cta">Consultar <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="service-card reveal reveal-delay-2">
+            <div class="service-icon"><i class="fa-solid fa-server"></i></div>
+            <h3>Backend &amp; Escalabilidad</h3>
+            <p>Diseño de arquitecturas backend capaces de soportar millones de usuarios simultáneos. Microservicios, colas de mensajería, cachés distribuidos y pipelines de datos en tiempo real.</p>
+            <ul class="service-tech">
+              <li>Go / Gin</li><li>Python / FastAPI</li><li>Redis / RabbitMQ</li><li>PostgreSQL / MongoDB</li><li>ElasticSearch</li>
+            </ul>
+            <div class="service-footer">
+              <a href="#contact" class="service-cta">Consultar <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+            <h3>E-Commerce &amp; Plataformas B2B</h3>
+            <p>Desarrollo de soluciones de comercio electrónico personalizadas, desde tiendas B2C hasta complejos portales de ventas B2B con integración de ERP, facturación electrónica y logística.</p>
+            <ul class="service-tech">
+              <li>Spring Boot</li>
+              <li>Next.js / Nuxt.js</li><li>Django / Laravel</li><li>Shopify API</li><li>WooCommerce</li><li>PostgreSQL</li>
+            </ul>
+            <div class="service-footer">
+              <a href="#contact" class="service-cta">Consultar <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="service-card reveal reveal-delay">
+            <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+            <h3>UX/UI Engineering</h3>
+            <p>No solo diseñamos interfaces atractivas: construimos Design Systems completos, flujos de usuario optimizados mediante pruebas A/B y prototipos interactivos validados con usuarios reales.</p>
+            <ul class="service-tech">
+              <li>Figma / Sketch</li><li>Storybook</li><li>Tailwind CSS</li><li>WCAG 2.1</li><li>Core Web Vitals</li>
+            </ul>
+            <div class="service-footer">
+              <a href="#contact" class="service-cta">Consultar <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="service-card reveal reveal-delay-2">
+            <div class="service-icon"><i class="fa-brands fa-docker"></i></div>
+            <h3>DevOps &amp; Cloud Infrastructure</h3>
+            <p>Implementación de pipelines CI/CD, contenedores Docker, orquestación con Kubernetes y despliegue en múltiples nubes. Monitoreo, alertas y recuperación ante desastres.</p>
+            <ul class="service-tech">
+              <li>Docker / Kubernetes</li><li>AWS / GCP / Azure</li><li>GitHub Actions</li><li>Terraform</li><li>Prometheus</li>
+            </ul>
+            <div class="service-footer">
+              <a href="#contact" class="service-cta">Consultar <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ PROJECTS / PORTFOLIO ═══════════════════════════ -->
+    <section id="projects" class="section-projects">
+      <div class="section-circuit-border top" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-label"><span class="code-bracket">&lt;</span>Portafolio<span class="code-bracket">/&gt;</span></div>
+        <h2 class="section-title text-center">Nuestros <span class="gradient-text">Proyectos</span></h2>
+        <p class="section-subtitle text-center">Estamos construyendo nuestro portafolio con la misma dedicación que ponemos en cada línea de código. Estos son los primeros — y hay más en camino.</p>
+
+        <!-- Filter por rubro -->
+        <div class="portfolio-filters">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="inmobiliarias">Inmobiliarias</button>
+          <button class="filter-btn" data-filter="hoteles">Hoteles</button>
+          <button class="filter-btn" data-filter="restaurantes">Restaurantes</button>
+          <button class="filter-btn" data-filter="mineria">Minería</button>
+          <button class="filter-btn" data-filter="corporativo">Corporativo</button>
+          <button class="filter-btn" data-filter="en-desarrollo">En Desarrollo</button>
+          <button class="filter-btn" data-filter="otros">Otros</button>
+        </div>
+
+        <!-- Projects Slider -->
+        <div class="projects-slider-wrapper">
+          <div class="projects-grid" id="projects-grid">
+
+            <!-- Horizonte Propiedades — Inmobiliarias -->
+            <article class="project-card reveal" data-category="inmobiliarias">
+              <div class="project-image">
+                <div class="project-img-placeholder corporate">
+                  <i class="fa-solid fa-building"></i>
+                  <div class="project-overlay">
+                    <a href="https://github.com/studioamweb120-collab/horizonte-propiedades.git" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+                      <i class="fa-brands fa-github"></i> Ver Proyecto
+                    </a>
+                  </div>
+                </div>
+                <div class="project-badge">Inmobiliarias</div>
+              </div>
+              <div class="project-body">
+                <h3>Horizonte Propiedades</h3>
+                <p class="project-tagline">Portal inmobiliario — Python · Flask · Mapa Interactivo</p>
+                <p class="project-desc">Portal inmobiliario web full-stack para el mercado peruano. Permite explorar y filtrar propiedades en Lima, Arequipa, Cusco y Trujillo. Incluye autenticación, favoritos, búsqueda avanzada y mapa interactivo con Leaflet.js.</p>
+                <div class="project-stack">
+                  <span>Python</span><span>Flask</span><span>SQLite</span><span>Leaflet.js</span><span>JavaScript</span>
+                </div>
+                <div class="project-metrics">
+                  <div class="metric"><i class="fa-solid fa-map-location-dot"></i> Mapa interactivo</div>
+                  <div class="metric"><i class="fa-solid fa-heart"></i> Sistema de favoritos</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Riff & Roast Coffee — Restaurantes -->
+            <article class="project-card reveal reveal-delay" data-category="restaurantes">
+              <div class="project-image">
+                <div class="project-img-placeholder fintech">
+                  <i class="fa-solid fa-mug-hot"></i>
+                  <div class="project-overlay">
+                    <a href="https://riffroast.vercel.app/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver Proyecto
+                    </a>
+                  </div>
+                </div>
+                <div class="project-badge">Restaurantes</div>
+              </div>
+              <div class="project-body">
+                <h3>Riff &amp; Roast Coffee</h3>
+                <p class="project-tagline">Cafetería temática — Dark Mode &amp; Menú Interactivo</p>
+                <p class="project-desc">Landing page temática para cafetería con menú interactivo y diseño Dark Mode. Pensada para capturar la identidad de la marca y convertir visitas en clientes.</p>
+                <div class="project-stack">
+                  <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Vercel</span>
+                </div>
+                <div class="project-metrics">
+                  <div class="metric"><i class="fa-solid fa-moon"></i> Dark Mode nativo</div>
+                  <div class="metric"><i class="fa-solid fa-utensils"></i> Menú interactivo</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Flujo App — Corporativo -->
+            <article class="project-card reveal reveal-delay-2" data-category="corporativo">
+              <div class="project-image">
+                <div class="project-img-placeholder saas">
+                  <i class="fa-solid fa-file-invoice-dollar"></i>
+                  <div class="project-overlay">
+                    <a href="https://flujo-mu.vercel.app/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver Proyecto
+                    </a>
+                  </div>
+                </div>
+                <div class="project-badge">Corporativo</div>
+              </div>
+              <div class="project-body">
+                <h3>Flujo App</h3>
+                <p class="project-tagline">Plataforma de facturación y finanzas — B2B</p>
+                <p class="project-desc">Plataforma de facturación y finanzas estilo SaaS B2B. Diseño minimalista con interacciones dinámicas, orientado a conversión y claridad de propuesta de valor.</p>
+                <div class="project-stack">
+                  <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Vercel</span>
+                </div>
+                <div class="project-metrics">
+                  <div class="metric"><i class="fa-solid fa-minimize"></i> Diseño minimalista</div>
+                  <div class="metric"><i class="fa-solid fa-bolt"></i> Interacciones fluidas</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Proyecto en Desarrollo — Otros -->
+            <article class="project-card reveal" data-category="en-desarrollo">
+              <div class="project-image">
+                <div class="project-img-placeholder data" style="flex-direction:column;gap:12px;">
+                  <i class="fa-solid fa-wand-magic-sparkles" style="font-size:2.5rem;opacity:0.7;"></i>
+                  <span style="font-family:var(--font-mono);font-size:0.75rem;opacity:0.6;letter-spacing:2px;">PRÓXIMAMENTE</span>
+                  <div class="project-overlay">
+                    <span class="btn btn-outline btn-sm" style="cursor:default;opacity:0.7;">
+                      <i class="fa-solid fa-lock"></i> En Desarrollo
+                    </span>
+                  </div>
+                </div>
+                <div class="project-badge" style="background: rgba(255,255,255,0.1); color: var(--text-secondary); border: 1px solid var(--border-color);">En Desarrollo</div>
+              </div>
+              <div class="project-body">
+                <h3>Proyecto en Desarrollo</h3>
+                <p class="project-tagline">Proyecto 04 — Pronto aquí</p>
+                <p class="project-desc">Este espacio está reservado para un proyecto que aún estamos construyendo. La información llegará cuando el trabajo esté listo.</p>
+                <div class="project-stack">
+                  <span>???</span><span>Stay tuned</span>
+                </div>
+                <div class="project-metrics">
+                  <div class="metric"><i class="fa-solid fa-hourglass-half"></i> En proceso</div>
+                  <div class="metric"><i class="fa-solid fa-fire"></i> Alta energía</div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+      <div class="section-circuit-border bottom" aria-hidden="true"></div>
+    </section>
+
+    <!-- ═══════════════════════════ PROCESS ═══════════════════════════ -->
+    <section id="process" class="section-process">
+      <div class="container">
+        <div class="section-label"><span class="code-bracket">&lt;</span>Metodología<span class="code-bracket">/&gt;</span></div>
+        <h2 class="section-title text-center">Nuestro <span class="gradient-text">Proceso</span></h2>
+        <p class="section-subtitle text-center">Un enfoque de desarrollo estructurado que elimina la ambigüedad, minimiza el riesgo y maximiza la calidad en cada fase del proyecto.</p>
+
+        <div class="process-timeline">
+
+          <div class="process-step reveal">
+            <div class="step-number">01</div>
+            <div class="step-connector"></div>
+            <div class="step-card">
+              <div class="step-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+              <h3>Descubrimiento &amp; Análisis</h3>
+              <p>Realizamos una auditoría técnica y de negocio exhaustiva: requerimientos funcionales y no funcionales, análisis de stakeholders, benchmarking competitivo y definición de KPIs de éxito. El resultado es un documento de especificación técnica (PRD) completo.</p>
+              <div class="step-deliverable"><i class="fa-solid fa-file-code"></i> Entregable: PRD &amp; Technical Spec</div>
+            </div>
+          </div>
+
+          <div class="process-step reveal reveal-delay">
+            <div class="step-number">02</div>
+            <div class="step-connector"></div>
+            <div class="step-card">
+              <div class="step-icon"><i class="fa-solid fa-drafting-compass"></i></div>
+              <h3>Diseño &amp; Arquitectura</h3>
+              <p>Definición de la arquitectura del sistema: selección del stack tecnológico, diseño de base de datos, diagramas C4 de componentes, wireframes de alta fidelidad en Figma y prototipo interactivo para validación con el cliente antes de escribir una línea de código.</p>
+              <div class="step-deliverable"><i class="fa-solid fa-file-code"></i> Entregable: System Design + Figma Prototype</div>
+            </div>
+          </div>
+
+          <div class="process-step reveal reveal-delay-2">
+            <div class="step-number">03</div>
+            <div class="step-connector"></div>
+            <div class="step-card">
+              <div class="step-icon"><i class="fa-brands fa-jira"></i></div>
+              <h3>Desarrollo Ágil por Sprints</h3>
+              <p>Implementación mediante sprints de 2 semanas con reuniones de revisión y retrospectiva. Integración continua con GitHub Actions, revisiones de código (PR reviews), cobertura de tests unitarios mínima del 80% y demos semanales al cliente.</p>
+              <div class="step-deliverable"><i class="fa-solid fa-file-code"></i> Entregable: Feature Releases Iterativas</div>
+            </div>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="step-number">04</div>
+            <div class="step-connector"></div>
+            <div class="step-card">
+              <div class="step-icon"><i class="fa-solid fa-flask"></i></div>
+              <h3>QA &amp; Testing Exhaustivo</h3>
+              <p>Ciclo completo de aseguramiento de calidad: tests unitarios e integración (Jest, Pytest), testing end-to-end (Playwright, Cypress), pruebas de carga y estrés (k6), auditoría de seguridad (OWASP Top 10) y revisión de accesibilidad WCAG 2.1.</p>
+              <div class="step-deliverable"><i class="fa-solid fa-file-code"></i> Entregable: QA Report &amp; Test Coverage</div>
+            </div>
+          </div>
+
+          <div class="process-step reveal reveal-delay">
+            <div class="step-number">05</div>
+            <div class="step-connector"></div>
+            <div class="step-card">
+              <div class="step-icon"><i class="fa-solid fa-rocket"></i></div>
+              <h3>Despliegue &amp; Go-Live</h3>
+              <p>Estrategia de despliegue de bajo riesgo: blue-green deployment o canary release, migración de datos con rollback garantizado, configuración de CDN, monitoreo con Prometheus/Grafana y plan de escalado automático ante picos de tráfico.</p>
+              <div class="step-deliverable"><i class="fa-solid fa-file-code"></i> Entregable: Production Release + Runbook</div>
+            </div>
+          </div>
+
+          <div class="process-step reveal reveal-delay-2">
+            <div class="step-number">06</div>
+            <div class="step-connector last"></div>
+            <div class="step-card">
+              <div class="step-icon"><i class="fa-solid fa-headset"></i></div>
+              <h3>Mantenimiento &amp; Evolución</h3>
+              <p>SLA de soporte técnico con tiempo de respuesta garantizado, monitoreo 24/7, actualizaciones de seguridad, optimización continua de rendimiento y roadmap de features basado en métricas de uso real. La relación no termina con el lanzamiento.</p>
+              <div class="step-deliverable"><i class="fa-solid fa-file-code"></i> Entregable: SLA Agreement + Monthly Reports</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+    <section id="contact" class="section-contact">
+      <div class="section-circuit-border top" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-label"><span class="code-bracket">&lt;</span>Contacto<span class="code-bracket">/&gt;</span></div>
+        <h2 class="section-title text-center">Iniciemos la <span class="gradient-text">Conversación</span></h2>
+        <p class="section-subtitle text-center">¿Tenés un proyecto en mente? Escribinos y conversemos. Respondemos dentro de las 24 horas hábiles.</p>
+
+        <!-- Contact Cards -->
+        <div class="contact-cards-grid reveal">
+
+          <!-- Email -->
+          <a href="mailto:studioamweb120@gmail.com" class="contact-card-link">
+            <div class="contact-card">
+              <div class="contact-card-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contact-card-body">
+                <span class="contact-card-label">Correo Electrónico</span>
+                <span class="contact-card-value">studioamweb120@gmail.com</span>
+              </div>
+              <i class="fa-solid fa-arrow-right contact-card-arrow"></i>
+            </div>
+          </a>
+
+          <!-- WhatsApp André -->
+          <a href="https://wa.me/51927535786?text=Hola%20Studio%20A%26M%20Web%2C%20tengo%20un%20proyecto%20en%20mente." class="contact-card-link" target="_blank" rel="noopener">
+            <div class="contact-card">
+              <div class="contact-card-icon whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div class="contact-card-body">
+                <span class="contact-card-label">WhatsApp — André</span>
+                <span class="contact-card-value">+51 927 535 786</span>
+              </div>
+              <i class="fa-solid fa-arrow-right contact-card-arrow"></i>
+            </div>
+          </a>
+
+          <!-- WhatsApp Marcelo -->
+          <a href="https://wa.me/51992865835?text=Hola%20Studio%20A%26M%20Web%2C%20tengo%20un%20proyecto%20en%20mente." class="contact-card-link" target="_blank" rel="noopener">
+            <div class="contact-card">
+              <div class="contact-card-icon whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div class="contact-card-body">
+                <span class="contact-card-label">WhatsApp — Marcelo</span>
+                <span class="contact-card-value">+51 992 865 835</span>
+              </div>
+              <i class="fa-solid fa-arrow-right contact-card-arrow"></i>
+            </div>
+          </a>
+
+          <!-- Ubicación -->
+          <div class="contact-card-link">
+            <div class="contact-card no-hover">
+              <div class="contact-card-icon location">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="contact-card-body">
+                <span class="contact-card-label">Ubicación</span>
+                <span class="contact-card-value">Huancayo, Perú — Proyectos globales</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA central -->
+        <div class="contact-cta-block reveal reveal-delay">
+          <div class="contact-cta-inner">
+            <div class="contact-cta-icon"><i class="fa-solid fa-rocket"></i></div>
+            <h3>Hablemos de tu proyecto</h3>
+            <p>Cuéntanos lo que necesitas y te ayudamos a convertirlo en una solución web clara, funcional y profesional. Sin formularios, sin intermediarios.</p>
+            <div class="contact-cta-actions">
+              <a href="mailto:studioamweb120@gmail.com" class="btn btn-primary">
+                <i class="fa-solid fa-envelope"></i> Escribirnos por Email
+              </a>
+              <a href="https://wa.me/51927535786?text=Hola%20Studio%20A%26M%20Web%2C%20tengo%20un%20proyecto%20en%20mente." class="btn btn-outline" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i> Abrir WhatsApp
+              </a>
+            </div>
+            <div class="contact-cta-meta">
+              <span><i class="fa-solid fa-clock"></i> Respuesta en menos de 24hs hábiles</span>
+              <span><i class="fa-solid fa-shield-halved"></i> Sin spam, sin compromiso</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-circuit-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo-wrapper">
+           <img src="img/logo.png" alt="Studio A & M Web Logo" class="logo-img">
+            <div class="footer-logo-fallback" style="display:none;">
+              <span class="logo-fallback-text sm">A<span class="amp">&amp;</span>M</span>
+            </div>
+          </div>
+          <p class="footer-tagline">Código moderno. Atención real.<br />Dos desarrolladores, toda la dedicación.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" aria-label="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-nav-block">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#about">Sobre Nosotros</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#process">Proceso</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-block">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="#services">Desarrollo Web a Medida</a></li>
+            <li><a href="#services">API Integration</a></li>
+            <li><a href="#services">Backend &amp; Escalabilidad</a></li>
+            <li><a href="#services">E-Commerce B2B</a></li>
+            <li><a href="#services">UX/UI Engineering</a></li>
+            <li><a href="#services">DevOps &amp; Cloud</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-block">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="mailto:studioamweb@gmail.com"><i class="fa-solid fa-envelope"></i> studioamweb120@gmail.com</a></li>
+            <li><a href="https://wa.me/51927535786"><i class="fa-brands fa-whatsapp"></i> +51 927 535 786</a></li>
+            <li><a href="https://wa.me/51992865835"><i class="fa-brands fa-whatsapp"></i> +51 992 865 835</a></li>
+            <li><span><i class="fa-solid fa-location-dot"></i> Huancayo, Perú</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-code-tag" aria-hidden="true">&lt;/studio-am-web&gt;</div>
+        <p class="copyright">&copy; <span id="footer-year"></span> Studio A &amp; M Web. Todos los derechos reservados.</p>
+        <div class="footer-legal">
+          <a href="#">Política de Privacidad</a>
+          <span>·</span>
+          <a href="#">Términos de Servicio</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════ MODALS ═══════════════════════════ -->
+  <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Detalles del Proyecto" style="display:none;">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close" aria-label="Cerrar">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Volver al inicio">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- Main Script -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
